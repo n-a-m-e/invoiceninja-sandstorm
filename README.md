@@ -9,3 +9,4 @@ To setup vagrant the following should do:
     vagrant-spk setupvm lemp
     cp -pfR ~/projects/invoiceninja-sandstorm/.sandstorm ~/projects/invoiceninja/.sandstorm
     vagrant-spk vm up
+    vagrant-spk dev
