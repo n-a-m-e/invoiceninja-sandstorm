@@ -6,6 +6,7 @@ https://docs.sandstorm.io/en/latest/vagrant-spk/installation/
 
 To setup vagrant the following should do:
 
+    mkdir -p ~/projects
     cd ~/projects
     git clone git://github.com/n-a-m-e/invoiceninja-sandstorm
     git clone git://github.com/invoiceninja/invoiceninja
