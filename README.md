@@ -1,5 +1,9 @@
 # invoiceninja-sandstorm
 
+install git, VirtualBox, vagrant and vagrant-spk as per the following link
+
+https://docs.sandstorm.io/en/latest/vagrant-spk/installation/
+
 To setup vagrant the following should do:
 
     cd ~/projects
