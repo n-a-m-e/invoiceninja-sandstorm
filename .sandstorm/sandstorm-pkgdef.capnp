@@ -1,4 +1,4 @@
-@0xe2626fa5369a2edc;
+@0xb25f48afcc39fe87;
 
 using Spk = import "/sandstorm/package.capnp";
 # This imports:
@@ -9,7 +9,7 @@ const pkgdef :Spk.PackageDefinition = (
   # The package definition. Note that the spk tool looks specifically for the
   # "pkgdef" constant.
 
-  id = "zs0pzz5zzq5hvqkzz5134zgd8c73t4j1an6z8z5fmrq2ehst12ah",
+  id = "eknyvvr2wfx9n5wp99ej7h8ux9wpq9hym43neer9a9mqcaxnytn0",
   # Your app ID is actually its public key. The private key was placed in
   # your keyring. All updates must be signed with the same key.
 
@@ -19,7 +19,7 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "Invoice Ninja"),
 
-    appVersion = 1,  # Increment this for every release.
+    appVersion = 0,  # Increment this for every release.
 
     appMarketingVersion = (defaultText = "2.6.4"),
     # Human-readable representation of appVersion. Should match the way you
@@ -47,13 +47,14 @@ const pkgdef :Spk.PackageDefinition = (
       # and (in deeper detail) in the sandstorm source code, in the Metadata section of
       # https://github.com/sandstorm-io/sandstorm/blob/master/src/sandstorm/package.capnp
       icons = (
+        # Various icons to represent the app in various contexts.
         #appGrid = (svg = embed "app-graphics/round_logo.svg"),
-        #grain = (png = embed "app-graphics/round_logo.svg"),
-        #market = (png = embed "app-graphics/round_logo.svg"),
-        #marketBig = (png = embed "app-graphics/round_logo.svg"),
+        #grain = (svg = embed "app-graphics/round_logo.svg"),
+        #market = (svg = embed "app-graphics/round_logo.svg"),
+        #marketBig = (svg = embed "app-graphics/round_logo.svg"),
       ),
 
-      website = "https://www.invoiceninja.com/",
+      website = "https://www.invoiceninja.com",
       # This should be the app's main website url.
 
       codeUrl = "https://github.com/invoiceninja/invoiceninja",
@@ -64,7 +65,7 @@ const pkgdef :Spk.PackageDefinition = (
       # The license this package is distributed under.  See
       # https://docs.sandstorm.io/en/latest/developing/publishing-apps/#license
 
-      categories = [productivity, office],
+      categories = [],
       # A list of categories/genres to which this app belongs, sorted with best fit first.
       # See the list of categories at
       # https://docs.sandstorm.io/en/latest/developing/publishing-apps/#categories
@@ -91,7 +92,7 @@ const pkgdef :Spk.PackageDefinition = (
         # Further details including how to set up GPG and how to use keybase.io can be found
         # at https://docs.sandstorm.io/en/latest/developing/publishing-apps/#verify-your-identity
 
-        upstreamAuthor = "Invoice Ninja Team",
+        upstreamAuthor = "Example App Team",
         # Name of the original primary author of this app, if it is different from the person who
         # produced the Sandstorm package. Setting this implies that the author connected to the PGP
         # signature only "packaged" the app for Sandstorm, rather than developing the app.
@@ -122,6 +123,9 @@ const pkgdef :Spk.PackageDefinition = (
         # Screenshots to use for marketing purposes.  Examples below.
         # Sizes are given in device-independent pixels, so if you took these
         # screenshots on a Retina-style high DPI screen, divide each dimension by two.
+
+        #(width = 746, height = 795, jpeg = embed "path/to/screenshot-1.jpeg"),
+        #(width = 640, height = 480, png = embed "path/to/screenshot-2.png"),
         (width = 1900, height = 980, png = embed "app-graphics/invoiceninja_example_01.png"),
         (width = 1900, height = 980, png = embed "app-graphics/invoiceninja_example_02.png"),
         (width = 1900, height = 980, png = embed "app-graphics/invoiceninja_example_03.png")
