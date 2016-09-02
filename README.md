@@ -20,4 +20,5 @@ To setup vagrant the following should do:
     chmod +x ~/projects/ninja/.sandstorm/*.sh
     bash ~/projects/ninja/.sandstorm/update-pkgdef.sh
     bash ~/projects/ninja/.sandstorm/update-files-list.sh
+    bash ~/projects/ninja/.sandstorm/fix-php-file.sh
     vagrant-spk dev
