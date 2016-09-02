@@ -14,7 +14,7 @@ To setup vagrant the following should do:
     unzip ninja-v2.6.10
     cd ~/projects/ninja
     vagrant-spk setupvm lemp
-    cp -fR ~/projects/invoiceninja-sandstorm/.sandstorm ~/projects/ninja/.sandstorm
+    cp -fR ~/projects/invoiceninja-sandstorm/.sandstorm ~/projects/ninja
     chmod +x ~/projects/ninja/.sandstorm/*.sh
     vagrant-spk vm up
     vagrant-spk init
