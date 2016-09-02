@@ -36,7 +36,6 @@ cp -n /opt/app/.env.example /var/.env
 rm -rf /var/app
 rm -rf /var/config
 rm -rf /var/database
-rm -rf /var/public
 rm -rf /var/resources
 rm -rf /var/vendor
 rm -rf /var/bootstrap/app.php
@@ -48,7 +47,6 @@ rm -rf /var/server.php
 ln -s /opt/app/app /var/app
 ln -s /opt/app/config /var/config
 ln -s /opt/app/database /var/database
-ln -s /opt/app/public /var/public
 ln -s /opt/app/resources /var/resources
 ln -s /opt/app/vendor /var/vendor
 ln -s /opt/app/bootstrap/app.php /var/bootstrap/app.php
