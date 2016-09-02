@@ -23,14 +23,44 @@ mkdir -p /var/storage/framework/sessions
 mkdir -p /var/storage/framework/views
 mkdir -p /var/storage/logs
 mkdir -p /var/storage/templates
-cp -naR /opt/app/sandstorm-backup-storage/. /var/storage
+cp -nR /opt/app/sandstorm-backup-storage/* /var/storage/
 mkdir -p /var/bootstrap
 mkdir -p /var/bootstrap/cache
-cp -naR /opt/app/sandstorm-backup-bootstrap/. /var/bootstrap
-mkdir -p /var/public
-mkdir -p /var/public/logo
-cp -naR /opt/app/public/sandstorm-backup-logo/. /var/public/logo
+cp -nR /opt/app/bootstrap/sandstorm-backup-cache/* /var/bootstrap/cache/
+#mkdir -p /var/public
+#mkdir -p /var/public/logo
+#cp -nR /opt/app/public/sandstorm-backup-logo/* /var/public/logo/
 cp -n /opt/app/.env.example /var/.env
+
+# create symlinks for php files inside the bootstrap cache folder
+rm -rf /var/app
+rm -rf /var/config
+rm -rf /var/database
+rm -rf /var/public
+rm -rf /var/resources
+rm -rf /var/vendor
+rm -rf /var/bootstrap/app.php
+rm -rf /var/bootstrap/autoload.php
+rm -rf /var/bootstrap/environment.php
+rm -rf /var/artisan
+rm -rf /var/c3.php
+rm -rf /var/server.php
+ln -s /opt/app/app /var/app
+ln -s /opt/app/config /var/config
+ln -s /opt/app/database /var/database
+ln -s /opt/app/public /var/public
+ln -s /opt/app/resources /var/resources
+ln -s /opt/app/vendor /var/vendor
+ln -s /opt/app/bootstrap/app.php /var/bootstrap/app.php
+ln -s /opt/app/bootstrap/autoload.php /var/bootstrap/autoload.php
+ln -s /opt/app/bootstrap/environment.php /var/bootstrap/environment.php
+ln -s /opt/app/artisan /var/artisan
+ln -s /opt/app/c3.php /var/c3.php
+ln -s /opt/app/server.php /var/server.php
+
+#chmod 777 /var/storage -R
+#chmod 777 /var/bootstrap -R
+#chmod 777 /var/public -R
 
 # Cleanup log files
 FILES="$(find /var/log -name '*.log')"
