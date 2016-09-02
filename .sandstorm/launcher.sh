@@ -27,9 +27,9 @@ cp -nR /opt/app/sandstorm-backup-storage/* /var/storage/
 mkdir -p /var/bootstrap
 mkdir -p /var/bootstrap/cache
 cp -nR /opt/app/bootstrap/sandstorm-backup-cache/* /var/bootstrap/cache/
-#mkdir -p /var/public
-#mkdir -p /var/public/logo
-#cp -nR /opt/app/public/sandstorm-backup-logo/* /var/public/logo/
+mkdir -p /var/public
+mkdir -p /var/public/logo
+cp -nR /opt/app/public/sandstorm-backup-logo/* /var/public/logo/
 cp -n /opt/app/.env.example /var/.env
 
 # create symlinks for php files inside the bootstrap cache folder
