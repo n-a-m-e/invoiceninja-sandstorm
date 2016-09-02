@@ -17,4 +17,7 @@ To setup vagrant the following should do:
     cp -fR ~/projects/invoiceninja-sandstorm/.sandstorm ~/projects/ninja/.sandstorm
     chmod +x ~/projects/ninja/.sandstorm/*.sh
     vagrant-spk vm up
+    vagrant-spk init
+    bash ~/projects/ninja/.sandstorm/update-pkgdef.sh
+    bash ~/projects/ninja/.sandstorm/update-files-list.sh
     vagrant-spk dev
