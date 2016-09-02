@@ -23,11 +23,14 @@ mkdir -p /var/storage/framework/sessions
 mkdir -p /var/storage/framework/views
 mkdir -p /var/storage/logs
 mkdir -p /var/storage/templates
-cp -pfnR /opt/app/sandstorm-backup-storage /var/storage
+cp -nR /opt/app/sandstorm-backup-storage /var/storage
 mkdir -p /var/bootstrap
 mkdir -p /var/bootstrap/cache
-cp -pfnR /opt/app/bootstrap/sandstorm-backup-cache /var/bootstrap/cache
-cp -f /opt/app/.env.example /var/.env
+cp -nR /opt/app/sandstorm-backup-bootstrap /var/bootstrap
+mkdir -p /var/public
+mkdir -p /var/public/logo
+cp -nR /opt/app/public/sandstorm-backup-logo /var/public/logo
+cp -n /opt/app/.env.example /var/.env
 
 # Cleanup log files
 FILES="$(find /var/log -name '*.log')"
