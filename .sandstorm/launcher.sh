@@ -13,7 +13,7 @@ rm -rf /var/run
 mkdir -p /var/run
 mkdir -p /var/run/mysqld
 
-# move storage folders which must be writable to /var
+# create folders which must be writable in /var
 mkdir -p /var/storage
 mkdir -p /var/storage/app
 mkdir -p /var/storage/debugbar
@@ -23,13 +23,17 @@ mkdir -p /var/storage/framework/sessions
 mkdir -p /var/storage/framework/views
 mkdir -p /var/storage/logs
 mkdir -p /var/storage/templates
-cp -nR /opt/app/sandstorm-backup-storage/* /var/storage/
 mkdir -p /var/bootstrap
 mkdir -p /var/bootstrap/cache
-cp -nR /opt/app/bootstrap/sandstorm-backup-cache/* /var/bootstrap/cache/
 mkdir -p /var/public
 mkdir -p /var/public/logo
+
+# copy contents of folders which must be writable to /var
+cp -nR /opt/app/sandstorm-backup-storage/* /var/storage/
+cp -nR /opt/app/bootstrap/sandstorm-backup-cache/* /var/bootstrap/cache/
 cp -nR /opt/app/public/sandstorm-backup-logo/* /var/public/logo/
+
+# create .env file which must be writable in /var
 cp -n /opt/app/.env.example /var/.env
 
 # create symlinks for php files inside the bootstrap cache folder
@@ -55,10 +59,6 @@ ln -s /opt/app/bootstrap/environment.php /var/bootstrap/environment.php
 ln -s /opt/app/artisan /var/artisan
 ln -s /opt/app/c3.php /var/c3.php
 ln -s /opt/app/server.php /var/server.php
-
-#chmod 777 /var/storage -R
-#chmod 777 /var/bootstrap -R
-#chmod 777 /var/public -R
 
 # Cleanup log files
 FILES="$(find /var/log -name '*.log')"
