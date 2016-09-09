@@ -5,7 +5,7 @@ cd "$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
 
 sed --in-place='' \
         --expression='s/appTitle = (defaultText = "Example App")/appTitle = (defaultText = "Invoice Ninja")/' \
-        --expression='s/appMarketingVersion = (defaultText = "0.0.0")/appMarketingVersion = (defaultText = "2.6.10")/' \
+        --expression='s/appMarketingVersion = (defaultText = "0.0.0")/appMarketingVersion = (defaultText = "2.6.11")/' \
         --expression='s/#appGrid = (svg = embed "path\/to\/appgrid-128x128.svg")/appGrid = (svg = embed "app-graphics\/round_logo.svg")/' \
 	--expression='s/#grain = (svg = embed "path\/to\/grain-24x24.svg")/grain = (svg = embed "app-graphics\/round_logo.svg")/' \
 	--expression='s/#market = (svg = embed "path\/to\/market-150x150.svg")/market = (svg = embed "app-graphics\/round_logo.svg")/' \
