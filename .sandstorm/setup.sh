@@ -9,9 +9,9 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y nginx php5-fpm php5-mysql php5-cli php5-curl git php5-dev mysql-server php5-mcrypt php5-gmp php5-gd
 #Enable PHP mods
-ln -s /etc/php5/conf.d/mcrypt.ini /etc/php5/mods-available/mcrypt.ini
-ln -s /etc/php5/conf.d/gmp.ini /etc/php5/mods-available/gmp.ini
-ln -s /etc/php5/conf.d/gd.ini /etc/php5/mods-available/gd.ini
+ln -sf /etc/php5/conf.d/mcrypt.ini /etc/php5/mods-available/mcrypt.ini
+ln -sf /etc/php5/conf.d/gmp.ini /etc/php5/mods-available/gmp.ini
+ln -sf /etc/php5/conf.d/gd.ini /etc/php5/mods-available/gd.ini
 php5enmod mcrypt
 php5enmod gmp
 php5enmod gd
